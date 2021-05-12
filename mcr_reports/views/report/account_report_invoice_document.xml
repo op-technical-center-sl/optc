@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <template id="report_invoice_document_inherit_address" inherit_id="sale.report_invoice_document_inherit_sale">
+            <xpath expr="//div[@t-field='o.partner_id']" position="before">
+                <strong>Delivery Address:</strong>
+            </xpath>
+        </template>
+
+        <template id="report_invoice_document_inherit" inherit_id="account.report_invoice_document">
+            <xpath expr="//div[@t-if='o.partner_id.vat']" position="replace">
+                <div t-if="o.partner_id.vat">
+                    VAT: <span t-field="o.partner_id.vat" />
+                </div>
+                <div t-if="o.partner_shipping_id.code_ice_1">
+                    ICE: <span t-field="o.partner_shipping_id.code_ice_1" />
+                </div>
+            </xpath>
+
+            <xpath expr="//h2" position="before">
+                <div t-if="o.partner_id.cofor_1 and o.partner_id.type == 'invoice'">
+                    COFOR: <span t-field="o.partner_id.cofor_1" />
+                </div>
+                <div t-if="o.information_program">
+                    <span t-field="o.information_program" />
+                </div>
+            </xpath>
+
+            <xpath expr="//h2" position="after">
+                <div t-if="o.shipping_number_1">
+                    Num de BL: <span  t-field="o.shipping_number_1" />
+                </div>
+            </xpath>
+
+            <xpath expr="//div[hasclass('clearfix')]/../p[1]" position="attributes">
+                <attribute name="class">d-none</attribute>
+            </xpath>
+
+            <xpath expr="//div[hasclass('clearfix')]" position="after">
+                <p t-if="o.legal_text">
+                    <span t-field="o.legal_text" class="p-1" style="height: 10px;"/>
+                </p>
+                <p t-if="o.partner_id.import_information">
+                    <span t-field="o.partner_id.import_information"/>
+                </p>
+                <p t-if="o.number_of_pallets">
+                    Number of pallets: <span t-field="o.number_of_pallets"/>
+                </p>
+                <p t-if="o.total_delivery_weight">
+                    Bruto weight in Kg: <span t-field="o.total_delivery_weight"/>
+                </p>
+                <p t-if="o.partner_id.other_info_1">
+                    <span t-field="o.partner_id.other_info_1"/>
+                </p>
+                <p t-if="o.invoice_incoterm_id">
+                    Incoterm: <span t-field="o.invoice_incoterm_id.name"/>
+                </p>
+                <p t-if="o.invoice_partner_bank_id">
+                    Bank Account: <span t-field="o.invoice_partner_bank_id.bank_id.name"/>
+                    / RIB: <span t-esc="' '.join(o.invoice_partner_bank_id.acc_number.split(' ')[1:])"/>
+                    / BIC: <span t-field="o.invoice_partner_bank_id.bank_id.bic"/>
+                    / IBAN: <span t-esc="o.invoice_partner_bank_id.acc_number[:4]"/>
+                </p>
+            </xpath>
+
+            <xpath expr="//th[@name='th_taxes']" position="attributes">
+                <attribute name="t-if">False</attribute>
+            </xpath>
+
+            <xpath expr="//span[@id='line_tax_ids']/.." position="attributes">
+                <attribute name="t-if">False</attribute>
+            </xpath>
+
+        </template>
+
+        <template id="sale_stock_report_invoice_document_inherit" inherit_id="sale_stock.sale_stock_report_invoice_document">
+            <xpath expr="//table[@name='invoice_snln_table']" position="attributes">
+                <attribute name="class">d-none</attribute>
+            </xpath>
+        </template>
+
+        <template id="report_invoice_document_inherit_sale_stock" inherit_id="sale_stock.report_invoice_document_inherit_sale_stock">
+            <xpath expr="//div[@name='invoice_incoterm_id']" position="attributes">
+                <attribute name="class">d-none</attribute>
+            </xpath>
+        </template>
+    </data>
+</odoo>

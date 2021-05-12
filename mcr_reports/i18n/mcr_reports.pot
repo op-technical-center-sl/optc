@@ -1,0 +1,98 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mcr_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-13 17:22+0000\n"
+"PO-Revision-Date: 2021-03-19 10:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document
+msgid "<span><strong>Invoice address:</strong></span>"
+msgstr ""
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_delivery_document_optc
+msgid "<strong>Delivery address:</strong>"
+msgstr ""
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document
+msgid "<strong>Number of pallets:</strong>"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model,name:mcr_reports.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model,name:mcr_reports.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model.fields,help:mcr_reports.field_res_partner__show_rex
+#: model:ir.model.fields,help:mcr_reports.field_res_users__show_rex
+msgid "If checked, REX number is shown in invoices"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model,name:mcr_reports.model_account_move
+msgid "Journal Entries"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model.fields,field_description:mcr_reports.field_account_move__legal_text
+#: model:ir.model.fields,field_description:mcr_reports.field_account_tax__legal_text
+msgid "Legal Text"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model.fields,field_description:mcr_reports.field_account_move__number_of_pallets
+#: model:ir.model.fields,field_description:mcr_reports.field_stock_picking__number_of_pallets
+msgid "Number Of Pallets"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model.fields,field_description:mcr_reports.field_stock_picking__palletized_invoice_id
+msgid "Palletized Invoice"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model.fields,field_description:mcr_reports.field_res_company__rex_number
+msgid "Rex Number"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model.fields,field_description:mcr_reports.field_res_partner__show_rex
+#: model:ir.model.fields,field_description:mcr_reports.field_res_users__show_rex
+msgid "Show Rex Number"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model,name:mcr_reports.model_account_tax
+msgid "Tax"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model,name:mcr_reports.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.external_layout_background_with_vat
+#: model_terms:ir.ui.view,arch_db:mcr_reports.external_layout_boxed_with_vat
+#: model_terms:ir.ui.view,arch_db:mcr_reports.external_layout_clean_with_vat
+#: model_terms:ir.ui.view,arch_db:mcr_reports.external_layout_standard_with_vat
+msgid "VAT:"
+msgstr ""

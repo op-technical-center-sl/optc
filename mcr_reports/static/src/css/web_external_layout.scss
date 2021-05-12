@@ -1,0 +1,25 @@
+#mcr-layout {
+    padding-bottom: 1mm;
+
+    #company-logo {
+        height: inherit;
+
+        img {
+            display: inline-block;
+            width: auto;
+            height: 35mm;
+        }
+    }
+
+    #iatf-logo {
+        height: inherit;
+        position: relative;
+
+        img {
+            position: absolute;
+            top: 8mm;
+            max-width: 28mm;
+            max-height: 28mm;
+        }
+    }
+}

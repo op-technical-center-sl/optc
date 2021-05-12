@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_account_move_form" model="ir.ui.view">
+            <field name="name">account.move.form</field>
+            <field name="model">account.move</field>
+            <field name="priority">150</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='ref']" position="after">
+                    <field name="information_program" attrs="{'invisible': [('type', '!=', 'out_invoice')]}" />
+                    <field name="invoice_type" required="context.get('extra_required', False)" attrs="{'invisible': [('type', '=', 'entry')]}" />
+                </xpath>
+                <xpath expr="//field[@name='currency_id']" position="after">
+                    <field name="shipping_number_1" attrs="{'invisible': [('type', '=', 'entry')]}" />
+                    <field name="number_of_pallets" attrs="{'invisible': [('type', '=', 'entry')]}" />
+                    <field name="total_delivery_weight" required="context.get('extra_required', False)" attrs="{'invisible': [('type', '=', 'entry')]}" />
+                    <field name="legal_text" invisible="1" />
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Make fields required when using actions to access the view -->
+        <record id="account.action_move_journal_line" model="ir.actions.act_window">
+            <field name="context">{'extra_required': False, 'default_type': 'entry', 'search_default_misc_filter':1, 'view_no_maturity': True}</field>
+        </record>
+        <record id="account.action_move_out_invoice_type" model="ir.actions.act_window">
+            <field name="context">{'extra_required': True, 'default_type': 'out_invoice'}</field>
+        </record>
+        <record id="account.action_move_out_refund_type" model="ir.actions.act_window">
+            <field name="context">{'extra_required': True, 'default_type': 'out_refund'}</field>
+        </record>
+        <record id="account.action_move_in_invoice_type" model="ir.actions.act_window">
+            <field name="context">{'extra_required': False, 'default_type': 'in_invoice'}</field>
+        </record>
+        <record id="account.action_move_in_refund_type" model="ir.actions.act_window">
+            <field name="context">{'extra_required': True, 'default_type': 'in_refund'}</field>
+        </record>
+        <record id="account.action_move_out_receipt_type" model="ir.actions.act_window">
+            <field name="context">{'extra_required': True, 'default_type': 'out_receipt'}</field>
+        </record>
+        <record id="account.action_move_in_receipt_type" model="ir.actions.act_window">
+            <field name="context">{'extra_required': True, 'default_type': 'in_receipt'}</field>
+        </record>
+    </data>
+</odoo>
