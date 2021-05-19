@@ -39,10 +39,11 @@
             </xpath>
 
             <xpath expr="//table[@name='stock_move_line_table']" position="after">
-                <p class="mt-4">Origen UE</p>
-                <p t-if="o.partner_id.other_info_1">
+                <div class="mt-4">Origen UE
+                </div>
+                <div t-if="o.partner_id.other_info_1">
                     <span t-field="o.partner_id.other_info_1"/>
-                </p>
+                </div>
             </xpath>
 
         </template>

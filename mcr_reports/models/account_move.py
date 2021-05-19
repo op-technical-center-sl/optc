@@ -1,6 +1,19 @@
 from odoo import api, models, fields
 
 
+class SaleOrder(models.Model):
+    _inherit = "sale.order"
+
+    @api.model
+    def _prepare_invoice(self):
+        values = super()._prepare_invoice()
+        #aqui viene la personalización
+        values.update({
+            'number_of_pallets': sum(self.picking_ids.mapped('number_of_pallets'))
+        })
+        return values
+
+
 class AccountMove(models.Model):
     _inherit = "account.move"
 
@@ -10,7 +23,10 @@ class AccountMove(models.Model):
 
     total_delivery_weight = fields.Float(string="Total Delivery Weight")
 
-    number_of_pallets = fields.Integer(string="Number of Pallets", compute="_compute_number_of_pallets", store=True)
+    # number_of_pallets = fields.Integer(string="Number of Pallets", compute="_compute_number_of_pallets", store=True)
+    number_of_pallets = fields.Integer(string="Number of Pallets")
+    # calc_number_of_pallets = fields.Integer(related='number_of_pallets', compute="_compute_number_of_pallets", store=True)
+
     picking_ids = fields.One2many(related="invoice_line_ids.sale_line_ids.order_id.picking_ids")
 
     invoice_type = fields.Selection(string="Type of Invoice", selection=[
