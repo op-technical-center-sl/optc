@@ -45,7 +45,40 @@
                     <span t-field="o.partner_id.other_info_1"/>
                 </div>
             </xpath>
-
+            <!-- Imprimir albarán sin número de lote
+            <xpath expr="//th[@name='lot_serial']" position="replace">
+            </xpath>            
+            <xpath expr="(//tbody)[2]" position="replace">
+                <tbody>
+                    <tr t-foreach="o.move_line_ids" t-as="move_line">
+                        <td>
+                            <span t-field="move_line.product_id"/>
+                            <p t-if="move_line.move_id.description_picking != move_line.product_id.name">
+                                <span t-field="move_line.move_id.description_picking"/>
+                            </p>
+                        </td>
+                        <td class="text-center">
+                            <span t-field="move_line.qty_done"/>
+                            <span t-field="move_line.product_uom_id"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </xpath>
+            -->
+        <!--
+        <xpath expr="//table[@class='table table-sm mt48']" position="replace">
+            <table class="table table-sm" t-if="o.state!='done'" name="stock_move_table">
+                <thead>
+                    <tr>
+                        <th name="th_sm_product"><strong>Product</strong></th>
+                        <th name="th_sm_quantity"><strong>Quantity</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </xpath>
+        -->
         </template>
     </data>
 </odoo>
