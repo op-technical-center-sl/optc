@@ -24,6 +24,7 @@
         "views/report/account_report_invoice_document.xml",
         "views/report/stock_report_delivery_document.xml",
         "views/report/report_saleorder_document.xml",
+        "views/report/report_purchaseorder_document.xml",
         "views/report/web_external_layout.xml",
         "data/report_documents.xml",
     ],
