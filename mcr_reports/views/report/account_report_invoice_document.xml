@@ -36,8 +36,7 @@
                 <attribute name="class">d-none</attribute>
             </xpath>
             <!--Ampliar el ancho del subtotal-->
-            <!--
-            <xpath expr="""//div[@t-attf-class="#{'col-4' if report_type != 'html' else 'col-sm-7 col-md-5'} ml-auto"]""" position="replace">
+            <xpath expr='&lt;div t-attf-class="#{&apos;col-4&apos; if report_type != &apos;html&apos; else &apos;col-sm-7 col-md-5&apos;} ml-auto"&gt;' position="replace">
                 <div t-attf-class="#{'col-3' if report_type != 'html' else 'col-sm-7 col-md-5'} ml-auto">
                     <table class="table table-sm;page-break-inside: avoid;">
                         <tr class="border-black o_subtotal" style="">
@@ -76,7 +75,6 @@
                     </table>
                 </div>                
             </xpath>
-            -->
 
 
 
