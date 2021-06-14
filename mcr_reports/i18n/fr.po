@@ -6,31 +6,97 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-13 17:22+0000\n"
-"PO-Revision-Date: 2021-02-13 18:24+0100\n"
-"Last-Translator: cubells <vicent@vcubells.net>\n"
+"POT-Creation-Date: 2021-06-11 07:03+0000\n"
+"PO-Revision-Date: 2021-06-11 07:03+0000\n"
+"Last-Translator: \n"
 "Language-Team: \n"
-"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"X-Generator: Poedit 2.4.1\n"
 
 #. module: mcr_reports
-#: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document
-msgid "<span><strong>Invoice address:</strong></span>"
-msgstr "<span><strong>Adresse de facturation:</strong></span>"
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document_inherit
+msgid "/ BIC:"
+msgstr ""
 
 #. module: mcr_reports
-#: model_terms:ir.ui.view,arch_db:mcr_reports.report_delivery_document_optc
-msgid "<strong>Delivery address:</strong>"
-msgstr "<span><strong>Adresse de Livraison:</strong></span>"
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document_inherit
+msgid "/ IBAN:"
+msgstr ""
 
 #. module: mcr_reports
-#: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document_inherit
+msgid "/ RIB:"
+msgstr ""
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.external_layout_mcr
+msgid "<br/>Nro REX:"
+msgstr ""
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.external_layout_mcr
+msgid "<br/>VAT:"
+msgstr ""
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_delivery_document_inherit
+msgid "<strong>Customer Reference:</strong>"
+msgstr "<strong>Num. de commande:</strong>"
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_delivery_document_inherit
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document_inherit_address
+msgid "<strong>Delivery Address:</strong>"
+msgstr "<strong>Adresse de Livraison:</strong>"
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_delivery_document_inherit
+msgid "<strong>Delivery note</strong>"
+msgstr "<strong>Bordereau de livraison</strong>"
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_delivery_document_inherit
+msgid "<strong>Incoterm:</strong>"
+msgstr ""
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_delivery_document_inherit
 msgid "<strong>Number of pallets:</strong>"
 msgstr "<strong>Nombre de palets:</strong>"
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document_inherit
+msgid "<strong>Origen España</strong>"
+msgstr "Origine UE"
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document_inherit
+msgid "Bank Account:"
+msgstr "Compte bancaire:"
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document_inherit
+msgid "Bruto weight in Kg:"
+msgstr "Poids brut en KG:"
+
+#. module: mcr_reports
+#: model:ir.model.fields,field_description:mcr_reports.field_res_partner__cofor_1
+#: model:ir.model.fields,field_description:mcr_reports.field_res_users__cofor_1
+msgid "COFOR"
+msgstr ""
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document_inherit
+msgid "COFOR:"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model.fields,field_description:mcr_reports.field_res_partner__code_ice
+#: model:ir.model.fields,field_description:mcr_reports.field_res_users__code_ice
+msgid "Code ICE"
+msgstr ""
 
 #. module: mcr_reports
 #: model:ir.model,name:mcr_reports.model_res_company
@@ -38,15 +104,69 @@ msgid "Companies"
 msgstr "Sociétés"
 
 #. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.external_layout_mcr
+msgid "Company Logo"
+msgstr ""
+
+#. module: mcr_reports
 #: model:ir.model,name:mcr_reports.model_res_partner
 msgid "Contact"
-msgstr "Contact"
+msgstr ""
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.external_layout_mcr
+msgid "Email:"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model.fields.selection,name:mcr_reports.selection__account_move__invoice_type__gastos
+msgid "Expenses"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model.fields.selection,name:mcr_reports.selection__account_move__invoice_type__i+d
+msgid "I+D"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model.fields,field_description:mcr_reports.field_res_partner__code_ice_1
+#: model:ir.model.fields,field_description:mcr_reports.field_res_users__code_ice_1
+msgid "ICE"
+msgstr ""
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_delivery_document_inherit
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document_inherit
+msgid "ICE:"
+msgstr ""
 
 #. module: mcr_reports
 #: model:ir.model.fields,help:mcr_reports.field_res_partner__show_rex
 #: model:ir.model.fields,help:mcr_reports.field_res_users__show_rex
 msgid "If checked, REX number is shown in invoices"
-msgstr "If checked, REX number is shown in invoices"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model.fields,field_description:mcr_reports.field_account_move__import_information
+#: model:ir.model.fields,field_description:mcr_reports.field_res_partner__import_information
+#: model:ir.model.fields,field_description:mcr_reports.field_res_users__import_information
+msgid "Import Information"
+msgstr ""
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document_inherit
+msgid "Incoterm:"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model.fields,field_description:mcr_reports.field_account_move__information_program
+msgid "Information Program"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model.fields.selection,name:mcr_reports.selection__account_move__invoice_type__inversiones
+msgid "Investments"
+msgstr ""
 
 #. module: mcr_reports
 #: model:ir.model,name:mcr_reports.model_account_move
@@ -60,26 +180,91 @@ msgid "Legal Text"
 msgstr "Texte légal"
 
 #. module: mcr_reports
-#: model:ir.model.fields,field_description:mcr_reports.field_account_move__number_of_pallets
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document_inherit
+msgid "Num de BL:"
+msgstr "Num. de BL:"
+
+#. module: mcr_reports
 #: model:ir.model.fields,field_description:mcr_reports.field_stock_picking__number_of_pallets
 msgid "Number Of Pallets"
 msgstr "Nombre de palets"
 
 #. module: mcr_reports
+#: model:ir.model.fields,field_description:mcr_reports.field_account_move__number_of_pallets
+msgid "Number of Pallets"
+msgstr ""
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document_inherit
+msgid "Number of pallets:"
+msgstr "Nombre de palets:"
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_delivery_document_inherit
+msgid "Origen UE"
+msgstr "Origine UE"
+
+#. module: mcr_reports
+#: model:ir.model.fields,field_description:mcr_reports.field_res_partner__other_info_1
+#: model:ir.model.fields,field_description:mcr_reports.field_res_users__other_info_1
+msgid "Other Info Maroc"
+msgstr ""
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.external_layout_mcr
+msgid "Page: <span class=\"page\"/> / <span class=\"topage\"/>"
+msgstr ""
+
+#. module: mcr_reports
 #: model:ir.model.fields,field_description:mcr_reports.field_stock_picking__palletized_invoice_id
 msgid "Palletized Invoice"
-msgstr "Palletized Invoice"
+msgstr ""
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.external_layout_mcr
+msgid "Phone:"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model.fields.selection,name:mcr_reports.selection__account_move__invoice_type__producción
+msgid "Production"
+msgstr ""
 
 #. module: mcr_reports
 #: model:ir.model.fields,field_description:mcr_reports.field_res_company__rex_number
 msgid "Rex Number"
-msgstr "Rex Number"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model,name:mcr_reports.model_sale_order
+msgid "Sales Order"
+msgstr "Bon de commande"
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.external_layout_mcr
+msgid "Secondary Logo"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model.fields,field_description:mcr_reports.field_res_company__report_secondary_logo
+msgid "Secondary Logo (on reports)"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model.fields.selection,name:mcr_reports.selection__account_move__invoice_type__servicios
+msgid "Services"
+msgstr ""
+
+#. module: mcr_reports
+#: model:ir.model.fields,field_description:mcr_reports.field_account_move__shipping_number_1
+msgid "Shipping Number"
+msgstr "Num. de BL"
 
 #. module: mcr_reports
 #: model:ir.model.fields,field_description:mcr_reports.field_res_partner__show_rex
 #: model:ir.model.fields,field_description:mcr_reports.field_res_users__show_rex
 msgid "Show Rex Number"
-msgstr "Show Rex Number"
+msgstr ""
 
 #. module: mcr_reports
 #: model:ir.model,name:mcr_reports.model_account_tax
@@ -87,21 +272,32 @@ msgid "Tax"
 msgstr "Taxe"
 
 #. module: mcr_reports
+#: model:ir.model.fields,field_description:mcr_reports.field_account_move__total_delivery_weight
+msgid "Total Delivery Weight"
+msgstr "Poids brut en KG"
+
+#. module: mcr_reports
 #: model:ir.model,name:mcr_reports.model_stock_picking
 msgid "Transfer"
 msgstr "Transfert"
 
 #. module: mcr_reports
-#: model_terms:ir.ui.view,arch_db:mcr_reports.external_layout_background_with_vat
-#: model_terms:ir.ui.view,arch_db:mcr_reports.external_layout_boxed_with_vat
-#: model_terms:ir.ui.view,arch_db:mcr_reports.external_layout_clean_with_vat
-#: model_terms:ir.ui.view,arch_db:mcr_reports.external_layout_standard_with_vat
-msgid "VAT:"
-msgstr "NIF:"
+#: model:ir.model.fields,field_description:mcr_reports.field_account_move__picking_ids
+msgid "Transfers"
+msgstr ""
 
-#~ msgid ""
-#~ "<strong>Number of pallets:</strong>\n"
-#~ "                <br/>"
-#~ msgstr ""
-#~ "<strong>Nombre de palets:</strong>\n"
-#~ "                <br/>"
+#. module: mcr_reports
+#: model:ir.model.fields,field_description:mcr_reports.field_account_move__invoice_type
+msgid "Type of Invoice"
+msgstr "Type de facture"
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_delivery_document_inherit
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document_inherit
+msgid "VAT:"
+msgstr "TVA:"
+
+#. module: mcr_reports
+#: model_terms:ir.ui.view,arch_db:mcr_reports.external_layout_mcr
+msgid "Web:"
+msgstr ""

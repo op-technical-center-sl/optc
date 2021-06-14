@@ -35,6 +35,50 @@
             <xpath expr="//div[hasclass('clearfix')]/../p[1]" position="attributes">
                 <attribute name="class">d-none</attribute>
             </xpath>
+            <!--Ampliar el ancho del subtotal-->
+            <!--
+            <xpath expr="""//div[@t-attf-class="#{'col-4' if report_type != 'html' else 'col-sm-7 col-md-5'} ml-auto"]""" position="replace">
+                <div t-attf-class="#{'col-3' if report_type != 'html' else 'col-sm-7 col-md-5'} ml-auto">
+                    <table class="table table-sm;page-break-inside: avoid;">
+                        <tr class="border-black o_subtotal" style="">
+                            <td><strong>Subtotal</strong></td>
+                            <td class="text-right">
+                                <span t-field="o.amount_untaxed"/>
+                            </td>
+                        </tr>
+                        <t t-foreach="o.amount_by_group" t-as="amount_by_group">
+                            <tr style="">
+                                <t t-if="len(o.line_ids.filtered(lambda line: line.tax_line_id)) == 1 and o.amount_untaxed == amount_by_group[2]">
+                                    <td><span t-esc="amount_by_group[0]"/></td>
+                                    <td class="text-right o_price_total">
+                                        <span t-esc="amount_by_group[3]"/>
+                                    </td>
+                                </t>
+                                <t t-else="">
+                                    <td>
+                                        <span t-esc="amount_by_group[0]"/>
+                                        <span>&amp;nbsp;<span>on</span>
+                                            <t t-esc="amount_by_group[4]"/>
+                                        </span>
+                                    </td>
+                                    <td class="text-right o_price_total">
+                                        <span t-esc="amount_by_group[3]"/>
+                                    </td>
+                                </t>
+                            </tr>
+                        </t>
+                        <tr class="border-black o_total">
+                            <td><strong>Total</strong></td>
+                            <td class="text-right">
+                                <span t-field="o.amount_total"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>                
+            </xpath>
+            -->
+
+
 
             <xpath expr="//div[hasclass('clearfix')]" position="after">
                 <p t-if="o.legal_text">
@@ -44,7 +88,7 @@
                     <strong><span style="font-size: 14px;" t-field="o.partner_id.import_information"/></strong>
                 </p>
                 <div style="font-size: 14px;">
-                    <strong>Origen España</strong>
+                    Origen UE
                 </div>
                 <div t-if="o.number_of_pallets" style="font-size: 14px;">
                     Number of pallets: <span t-field="o.number_of_pallets"/>
@@ -96,5 +140,40 @@
                 <attribute name="class">d-none</attribute>
             </xpath>
         </template>
+        
+        <template id="invoice_document_settings" inherit_id="account.report_invoice_document_with_payments">
+
+            <xpath expr="/t/t/div/div[5]/div" position="attributes">
+                <attribute name="class" separator=" " add="text-right"/>
+            </xpath>
+            <xpath expr="/t/t/div/div[5]/div/div/table" position="attributes">
+                <attribute name="class" separator=" " add="table-sm" remove="table-sm;page-break-inside:"/>
+            </xpath>
+
+            <xpath expr="/t/t/div/div[4]/div[1]" position="attributes">
+                <attribute name="style" separator=";" add="margin-left:5px"/>
+            </xpath>
+
+            <xpath expr="/t/t/div/p[1]/span" position="attributes">
+                <attribute name="style" separator=";" add="margin-left:-4px"/>
+            </xpath>
+        </template>
+        
+        <template id="invoice_document_settings_without_payments" inherit_id="account.report_invoice_document">
+            <xpath expr="/t[1]/t[1]/div[1]/p[6]" position="replace"/>
+            <xpath expr="/t/t/div/div[5]/div" position="attributes">
+                <attribute name="class" separator=" " add="text-right"/>
+            </xpath>
+            <xpath expr="/t/t/div/div[5]/div/div/table" position="attributes">
+                <attribute name="class" separator=" " add="table-sm" remove="table-sm;page-break-inside:"/>
+            </xpath>
+            <xpath expr="/t/t/div/div[4]/div[1]" position="attributes">
+                <attribute name="style" separator=";" add="margin-left:5px"/>
+            </xpath>
+            <xpath expr="/t/t/div/p[1]/span" position="attributes">
+                <attribute name="style" separator=";" add="margin-left:-4px"/>
+            </xpath>
+        </template>
+
     </data>
 </odoo>

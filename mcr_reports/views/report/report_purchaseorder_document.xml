@@ -11,6 +11,17 @@
                 <td name="td_taxes">
                 </td>
             </xpath>
+            <!-- Personalizaciones de Studio -->
+            <xpath expr="/t[1]/t[1]/div[1]/table[1]/tbody[1]/t[2]/tr[1]/t[1]/td[4]/span[2]" position="replace"/>
+            <xpath expr="/t/t/div/table/thead/tr/th[6]/strong" position="replace">
+                <strong>Total</strong>
+            </xpath>
+            <xpath expr="/t[1]/t[1]/div[1]/div[2]/div[3]/p[1]" position="attributes">
+                <attribute name="t-options-widget">"date"</attribute>
+            </xpath>
+            <xpath expr="/t[1]/t[1]/div[1]/table[1]/tbody[1]/t[2]/tr[1]/t[1]/td[3]/span[1]" position="attributes">
+                <attribute name="t-options-widget">"date"</attribute>
+            </xpath>
         </template>
     </data>
 </odoo>

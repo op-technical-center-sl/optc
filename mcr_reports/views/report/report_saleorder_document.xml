@@ -6,6 +6,56 @@
             </xpath>
             <xpath expr="//td[@name='td_taxes']" position="replace">
             </xpath>
+            <!-- Cust. PO Number -->
+            <!--
+            <xpath expr="/t/t/div/h2" position="after">
+                <div class="row">
+                <div class="col-3">
+                    <span>
+                    <strong>Cust. PO number:</strong>
+                    <br/>
+                    </span>
+                    <span t-field="doc.x_studio_cust_po_number"/>
+                </div>
+                <div class="col-3"/>
+                <div class="col-3"/>
+                <div class="col-3"/>
+                </div>
+            </xpath>   
+            -->
+            <!-- <xpath expr="/t/t/div/div[3]/div[2]" position="inside"> 
+            <xpath expr="//div[@class='row mt32 mb32']" position="inside"> -->
+            <xpath expr="//h2[@class='mt16']" position="after">
+                <div id="delivery date">
+                <span>
+                    <strong>Delivery Date:</strong>
+                    <br/>
+                    <span t-field="doc.commitment_date"/>
+                    </span>
+                </div>
+            </xpath>
+
+            <xpath expr="//div[@id='informations']//p[@t-field='doc.date_order']" position="attributes">
+                <attribute name="t-options-widget">"date"</attribute>
+            </xpath>
+            <xpath expr="//div[@id='delivery date']//span[@t-field='doc.commitment_date']" position="attributes">
+                <attribute name="t-options-widget">"date"</attribute>
+            </xpath>
         </template>
+        <!-- 
+        <template id="report_saleorder_studio_custom" inherit_id="studio_customization.odoo_studio_report_s_a960d18a-5032-4631-9251-13416d79ac0f">
+            <xpath expr="/t/t/div/div[3]/div[2]" position="inside">
+                <span>
+                <strong>Delivery Date:</strong>
+                <br/>
+                </span>
+            </xpath>
+
+
+            <xpath expr="/t/t/div/div[3]/div[2]" position="attributes">
+                <attribute name="style" separator=";" add="margin-left:200px"/>
+            </xpath>            
+        </template>
+        -->
     </data>
 </odoo>
