@@ -31,6 +31,20 @@
                     Num de BL: <span  t-field="o.shipping_number_1" />
                 </div>
             </xpath>
+
+            <!--Ajuste margen izquierdo: Número de factura -->
+            <xpath expr="//h2" position="attributes">
+                <attribute name="style" separator=";" add="margin-left:-2px"/>
+            </xpath>            
+            <!--Ajuste margen izquierdo: Fecha factura, fecha pedido, origen, num. pedido -->
+            <xpath expr="//div[@id='informations']" position="attributes">
+                <attribute name="style" separator=";" add="margin-left:-20px"/>
+            </xpath>
+            <!--Ajuste margen izquierdo: Detalle de la factura -->
+            <xpath expr="//table[@name='invoice_line_table']" position="attributes">
+                <attribute name="style" separator=";" add="margin-left:-4px"/>
+            </xpath>            
+
             <!-- El siguiente xpath no se a que se refiere-->
             <xpath expr="//div[hasclass('clearfix')]/../p[1]" position="attributes">
                 <attribute name="class">d-none</attribute>
@@ -76,8 +90,6 @@
                         </table>
                     </div>
                 </div>
-
-
             </xpath>          
 
             <xpath expr="//div[hasclass('clearfix')]" position="after">
