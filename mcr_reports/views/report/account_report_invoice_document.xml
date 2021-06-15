@@ -100,7 +100,7 @@
                     <strong><span style="font-size: 14px;" t-field="o.partner_id.import_information"/></strong>
                 </p>
                 <div style="font-size: 14px;">
-                    Origen UE
+                    Origin UE
                 </div>
                 <div t-if="o.number_of_pallets" style="font-size: 14px;">
                     Number of pallets: <span t-field="o.number_of_pallets"/>
