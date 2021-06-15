@@ -94,7 +94,7 @@
 
             <xpath expr="//div[hasclass('clearfix')]" position="after">
                 <p t-if="o.legal_text">
-                    <span t-field="o.legal_text" class="p-1" style="height: 10px;"/>
+                    <span t-field="o.legal_text" class="p-1" style="font-size: 14px;"/>
                 </p>
                 <p t-if="o.partner_id.import_information">
                     <strong><span style="font-size: 14px;" t-field="o.partner_id.import_information"/></strong>
