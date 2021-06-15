@@ -14,6 +14,7 @@
                     <field name="information_program" attrs="{'invisible': [('type', '!=', 'out_invoice')]}" />
                     <field name="invoice_type" required="context.get('extra_required', False)" attrs="{'invisible': [('type', '=', 'entry')]}" />
                     <!-- <field name="x_studio_supplier_invoice_number" required="context.get('extra_required', False)" attrs="{'invisible': ['|','&amp;',['type','=','out_invoice'],['type','=','entry'],['journal_id','=','sale']]}" /> -->
+                    <!-- <field name="x_studio_supplier_invoice_number" required="context.get('extra_required', False)" attrs="{'invisible': ['|',['type','=','out_invoice'],[('&amp;','type','=','entry', )],]}" /> -->
                     <field name="x_studio_supplier_invoice_number" required="context.get('extra_required', False)" attrs="{'invisible': ['|',['type','=','out_invoice'],['type','=','entry']]}" />
                 </xpath>
                 <xpath expr="//field[@name='currency_id']" position="after">
