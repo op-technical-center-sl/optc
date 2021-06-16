@@ -1,6 +1,7 @@
 from odoo import api, models, fields
 
 
+
 class SaleOrder(models.Model):
     _inherit = "sale.order"
 
@@ -63,3 +64,4 @@ class AccountMove(models.Model):
             )
             pickings.write({"palletized_invoice_id": invoice.id})
             invoice.number_of_pallets = sum(pickings.mapped("number_of_pallets"))
+
