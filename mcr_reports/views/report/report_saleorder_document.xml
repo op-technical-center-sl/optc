@@ -7,7 +7,7 @@
             <xpath expr="//td[@name='td_taxes']" position="replace">
             </xpath>
             <xpath expr="//h2[@class='mt16']" position="after">
-                <div id="delivery date">
+                <div t-if="doc.commitment_date" id="delivery date">
                 <span>
                     <strong>Delivery Date:</strong>
                     <br/>
