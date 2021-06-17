@@ -1,15 +1,15 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # 	* mcr_reports
-# 	* sale_management
 # 	* purchase
+# 	* sale_management
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-17 09:34+0000\n"
-"PO-Revision-Date: 2021-06-17 09:34+0000\n"
+"POT-Creation-Date: 2021-06-17 10:26+0000\n"
+"PO-Revision-Date: 2021-06-17 10:26+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -53,7 +53,7 @@ msgstr ""
 #. module: mcr_reports
 #: model_terms:ir.ui.view,arch_db:mcr_reports.report_saleorder_document_inherit
 msgid "&amp;nbsp;<span>on</span>&amp;nbsp;"
-msgstr "&amp;nbsp;<span>en</span>&amp;nbsp;"
+msgstr ""
 
 #. module: purchase
 #: model:ir.actions.report,print_report_name:purchase.report_purchase_quotation
@@ -435,20 +435,20 @@ msgstr "Decoración de Actividad  de Excepción"
 msgid "Activity State"
 msgstr "Estado de la actividad"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
 #: model_terms:ir.ui.view,arch_db:sale_management.sale_order_template_view_form
 msgid "Add a note"
 msgstr "Agregar nota"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
 #: model_terms:ir.ui.view,arch_db:sale_management.sale_order_form_quote
 #: model_terms:ir.ui.view,arch_db:sale_management.sale_order_template_view_form
 msgid "Add a product"
 msgstr "Agregar un producto"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
 #: model_terms:ir.ui.view,arch_db:sale_management.sale_order_template_view_form
 msgid "Add a section"
@@ -694,7 +694,7 @@ msgid "Cannot delete a purchase order line which is in state '%s'."
 msgstr ""
 "No se puede eliminar una línea de pedido de venta que esté en estado '%s'."
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__product_uom_category_id
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_option__product_uom_category_id
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_template_line__product_uom_category_id
@@ -719,7 +719,7 @@ msgstr "Entidad comercial"
 msgid "Companies"
 msgstr "Compañías"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model:ir.model.fields,field_description:purchase.field_purchase_bill_union__company_id
 #: model:ir.model.fields,field_description:purchase.field_purchase_order__company_id
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__company_id
@@ -747,7 +747,7 @@ msgstr ""
 msgid "Compose Email"
 msgstr "Componer correo electrónico"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model:ir.model,name:purchase.model_res_config_settings
 #: model:ir.model,name:sale_management.model_res_config_settings
 msgid "Config Settings"
@@ -802,7 +802,7 @@ msgstr "Contacto"
 msgid "Control Policy"
 msgstr "Política de Control"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model:ir.model.fields,help:purchase.field_purchase_order_line__product_uom_category_id
 #: model:ir.model.fields,help:sale_management.field_sale_order_option__product_uom_category_id
 #: model:ir.model.fields,help:sale_management.field_sale_order_template_line__product_uom_category_id
@@ -850,7 +850,7 @@ msgstr "Crear plantillas de ofertas con productos predeterminados"
 msgid "Create your quotation template"
 msgstr "Cree su plantilla de presupuesto"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model:ir.model.fields,field_description:purchase.field_purchase_order__create_uid
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__create_uid
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_option__create_uid
@@ -860,7 +860,7 @@ msgstr "Cree su plantilla de presupuesto"
 msgid "Created by"
 msgstr "Creado por"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model:ir.model.fields,field_description:purchase.field_purchase_order__create_date
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__create_date
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_option__create_date
@@ -928,7 +928,7 @@ msgstr ""
 "Representa la fecha en que el presupuesto debe ser validado y se convierte "
 "en una orden de compra."
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__name
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_option__name
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_template_line__name
@@ -967,7 +967,7 @@ msgstr "Desc.%"
 msgid "Discount (%)"
 msgstr "Descuento (%)"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model:ir.model.fields,field_description:purchase.field_purchase_bill_union__display_name
 #: model:ir.model.fields,field_description:purchase.field_purchase_order__display_name
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__display_name
@@ -979,7 +979,7 @@ msgstr "Descuento (%)"
 msgid "Display Name"
 msgstr "Nombre mostrado"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__display_type
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_template_line__display_type
 msgid "Display Type"
@@ -1138,7 +1138,7 @@ msgstr ""
 msgid "ICE:"
 msgstr ""
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model:ir.model.fields,field_description:purchase.field_purchase_bill_union__id
 #: model:ir.model.fields,field_description:purchase.field_purchase_order__id
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__id
@@ -1289,7 +1289,7 @@ msgstr "Apunte contable"
 msgid "Kpi All Sale Total Value"
 msgstr "indicador clave de rendimiento(KPI) Valor total de venta total"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model:ir.model.fields,field_description:purchase.field_purchase_bill_union____last_update
 #: model:ir.model.fields,field_description:purchase.field_purchase_order____last_update
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line____last_update
@@ -1301,7 +1301,7 @@ msgstr "indicador clave de rendimiento(KPI) Valor total de venta total"
 msgid "Last Modified on"
 msgstr "Última modificación en"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model:ir.model.fields,field_description:purchase.field_purchase_order__write_uid
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__write_uid
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_option__write_uid
@@ -1311,7 +1311,7 @@ msgstr "Última modificación en"
 msgid "Last Updated by"
 msgstr "Última actualización por"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model:ir.model.fields,field_description:purchase.field_purchase_order__write_date
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__write_date
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_option__write_date
@@ -1528,7 +1528,7 @@ msgstr "Siguiente tipo de actividad"
 msgid "No Message"
 msgstr "Sin mensaje"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model:ir.model.fields.selection,name:purchase.selection__purchase_order_line__display_type__line_note
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
 #: model:ir.model.fields.selection,name:sale_management.selection__sale_order_template_line__display_type__line_note
@@ -1700,7 +1700,7 @@ msgstr "Pedidos"
 #: model_terms:ir.ui.view,arch_db:mcr_reports.report_delivery_document_inherit
 #: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document_inherit
 msgid "Origin UE"
-msgstr ""
+msgstr "Origen UE"
 
 #. module: mcr_reports
 #: model:ir.model.fields,field_description:mcr_reports.field_res_partner__other_info_1
@@ -1775,7 +1775,7 @@ msgstr "Precio por proveedor"
 msgid "Print RFQ"
 msgstr "Imprimir SdP"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model:ir.model,name:purchase.model_product_product
 #: model:ir.model.fields,field_description:purchase.field_purchase_order__product_id
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__product_id
@@ -2066,7 +2066,7 @@ msgstr "Ctdad a facturar"
 msgid "Quantities billed by vendors"
 msgstr "Cantidades facturadas por los proveedores"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__product_qty
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_option__quantity
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_template_line__product_uom_qty
@@ -2074,7 +2074,7 @@ msgstr "Cantidades facturadas por los proveedores"
 msgid "Quantity"
 msgstr "Cantidad"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
 #: model_terms:ir.ui.view,arch_db:sale_management.sale_order_form_quote
 msgid "Quantity:"
@@ -2403,7 +2403,7 @@ msgstr ""
 msgid "Secondary Logo (on reports)"
 msgstr ""
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model:ir.model.fields.selection,name:purchase.selection__purchase_order_line__display_type__line_section
 #: model:ir.model.fields.selection,name:sale_management.selection__sale_order_template_line__display_type__line_section
 #: model_terms:ir.ui.view,arch_db:sale_management.sale_order_template_view_form
@@ -2455,7 +2455,7 @@ msgstr "Enviar PC por correo electrónico"
 msgid "Send by Email"
 msgstr "Enviar por correo electrónico"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__sequence
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_option__sequence
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_template_line__sequence
@@ -2568,7 +2568,7 @@ msgstr "Impuestos"
 msgid "Taxes:"
 msgstr "Impuestos:"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model:ir.model.fields,help:purchase.field_purchase_order_line__display_type
 #: model:ir.model.fields,help:sale_management.field_sale_order_template_line__display_type
 msgid "Technical field for UX purpose."
@@ -2771,7 +2771,7 @@ msgstr ""
 "No se puede cancelar este pedido de compra. Primero debe cancelar las "
 "facturas de proveedor relacionadas."
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__price_unit
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_option__price_unit
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_template_line__price_unit
@@ -2781,13 +2781,13 @@ msgstr ""
 msgid "Unit Price"
 msgstr "Precio unitario"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
 #: model_terms:ir.ui.view,arch_db:sale_management.sale_order_form_quote
 msgid "Unit Price:"
 msgstr "Precio unitario:"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__product_uom
 #: model:ir.model.fields,field_description:sale_management.field_sale_order_template_line__product_uom_id
 msgid "Unit of Measure"
@@ -2845,7 +2845,7 @@ msgstr "Base imponible:"
 msgid "Untaxed Total"
 msgstr "Total libre de impuestos"
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
 #: model_terms:ir.ui.view,arch_db:sale_management.sale_order_form_quote
 msgid "UoM"
@@ -3049,7 +3049,7 @@ msgstr ""
 "Debe definir un producto para todo lo que vende o compra,\n"
 "             ya sea un producto almacenable, un consumible o un servicio."
 
-#. modules: sale_management, purchase
+#. modules: purchase, sale_management
 #: code:addons/purchase/models/purchase.py:0
 #: code:addons/sale_management/models/sale_order.py:0
 #, python-format
