@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-16 08:40+0000\n"
-"PO-Revision-Date: 2021-06-16 08:40+0000\n"
+"POT-Creation-Date: 2021-06-17 09:34+0000\n"
+"PO-Revision-Date: 2021-06-17 09:34+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -53,7 +53,7 @@ msgstr ""
 #. module: mcr_reports
 #: model_terms:ir.ui.view,arch_db:mcr_reports.report_saleorder_document_inherit
 msgid "&amp;nbsp;<span>on</span>&amp;nbsp;"
-msgstr ""
+msgstr "&amp;nbsp;<span>en</span>&amp;nbsp;"
 
 #. module: purchase
 #: model:ir.actions.report,print_report_name:purchase.report_purchase_quotation
@@ -273,6 +273,8 @@ msgid ""
 "<strong>Delivery Date:</strong>\n"
 "                    <br/>"
 msgstr ""
+"<strong>Fecha de entrega:</strong>\n"
+"                    <br/>"
 
 #. module: mcr_reports
 #: model_terms:ir.ui.view,arch_db:mcr_reports.report_delivery_document_inherit
@@ -305,7 +307,8 @@ msgstr "<strong>Número de palets:</strong>"
 msgid "<strong>Order Date:</strong>"
 msgstr "<strong>Fecha orden:</strong>"
 
-#. module: purchase
+#. modules: mcr_reports, purchase
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_delivery_document_inherit
 #: model_terms:ir.ui.view,arch_db:purchase.portal_my_purchase_order
 msgid "<strong>Product</strong>"
 msgstr "<strong>Producto</strong>"
@@ -321,7 +324,8 @@ msgstr "<strong>Representante del Proveedor:</strong>"
 msgid "<strong>Qty</strong>"
 msgstr "<strong>Cant</strong>"
 
-#. module: purchase
+#. modules: mcr_reports, purchase
+#: model_terms:ir.ui.view,arch_db:mcr_reports.report_delivery_document_inherit
 #: model_terms:ir.ui.view,arch_db:purchase.portal_my_purchase_order
 msgid "<strong>Quantity</strong>"
 msgstr "<strong>Cantidad</strong>"
@@ -1694,10 +1698,6 @@ msgstr "Pedidos"
 
 #. module: mcr_reports
 #: model_terms:ir.ui.view,arch_db:mcr_reports.report_delivery_document_inherit
-msgid "Origen UE"
-msgstr ""
-
-#. module: mcr_reports
 #: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document_inherit
 msgid "Origin UE"
 msgstr ""

@@ -64,8 +64,14 @@
                             </p>
                         </td>
                         <td class="text-center">
-                            <span t-esc="line[1]['qty']"/>
-                            <span t-field="move_line.product_uom_id"/>
+                            <t t-if="move_line.product_uom_id.measure_type == 'unit'">
+                                <span t-esc="int(line[1]['qty'])"/>
+                            </t>
+                            <t t-else="">
+                                <span t-esc="line[1]['qty']"/>
+                            </t>
+                                <!-- <span t-esc="int(line[1]['qty'])"/> -->
+                                <span t-field="move_line.product_uom_id"/>
                         </td>
                     </tr>
 
