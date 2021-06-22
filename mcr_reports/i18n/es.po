@@ -1,15 +1,15 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* mcr_reports
 # 	* purchase
+# 	* mcr_reports
 # 	* sale_management
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-17 10:26+0000\n"
-"PO-Revision-Date: 2021-06-17 10:26+0000\n"
+"POT-Creation-Date: 2021-06-22 09:54+0000\n"
+"PO-Revision-Date: 2021-06-22 09:54+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -307,7 +307,7 @@ msgstr "<strong>Número de palets:</strong>"
 msgid "<strong>Order Date:</strong>"
 msgstr "<strong>Fecha orden:</strong>"
 
-#. modules: mcr_reports, purchase
+#. modules: purchase, mcr_reports
 #: model_terms:ir.ui.view,arch_db:mcr_reports.report_delivery_document_inherit
 #: model_terms:ir.ui.view,arch_db:purchase.portal_my_purchase_order
 msgid "<strong>Product</strong>"
@@ -324,7 +324,7 @@ msgstr "<strong>Representante del Proveedor:</strong>"
 msgid "<strong>Qty</strong>"
 msgstr "<strong>Cant</strong>"
 
-#. modules: mcr_reports, purchase
+#. modules: purchase, mcr_reports
 #: model_terms:ir.ui.view,arch_db:mcr_reports.report_delivery_document_inherit
 #: model_terms:ir.ui.view,arch_db:purchase.portal_my_purchase_order
 msgid "<strong>Quantity</strong>"
@@ -336,7 +336,7 @@ msgstr "<strong>Cantidad</strong>"
 msgid "<strong>Shipping address:</strong>"
 msgstr "<strong>Dirección de Envío</strong>"
 
-#. modules: mcr_reports, purchase
+#. modules: purchase, mcr_reports
 #: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document_inherit
 #: model_terms:ir.ui.view,arch_db:mcr_reports.report_saleorder_document_inherit
 #: model_terms:ir.ui.view,arch_db:purchase.portal_my_purchase_order
@@ -359,7 +359,7 @@ msgstr "<strong>La cantidad pedida ha sido actualizada.</strong>"
 msgid "<strong>Total:</strong>"
 msgstr ""
 
-#. modules: mcr_reports, purchase
+#. modules: purchase, mcr_reports
 #: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document_inherit
 #: model_terms:ir.ui.view,arch_db:mcr_reports.report_purchaseorder_document_inherit
 #: model_terms:ir.ui.view,arch_db:mcr_reports.report_saleorder_document_inherit
@@ -713,7 +713,7 @@ msgstr ""
 msgid "Commercial Entity"
 msgstr "Entidad comercial"
 
-#. modules: mcr_reports, purchase
+#. modules: purchase, mcr_reports
 #: model:ir.model,name:mcr_reports.model_res_company
 #: model:ir.model,name:purchase.model_res_company
 msgid "Companies"
@@ -790,7 +790,7 @@ msgstr "Correo electrónico de confirmación"
 msgid "Confirmed purchase orders are not editable"
 msgstr "Las ordenes de compra confirmadas no son editables"
 
-#. modules: mcr_reports, purchase
+#. modules: purchase, mcr_reports
 #: model:ir.model,name:mcr_reports.model_res_partner
 #: model:ir.model,name:purchase.model_res_partner
 msgid "Contact"
@@ -1273,7 +1273,7 @@ msgstr "Es un seguidor"
 msgid "It will be converted into a purchase order."
 msgstr "Se convertirá en una orden de compra."
 
-#. modules: mcr_reports, purchase
+#. modules: purchase, mcr_reports
 #: model:ir.model,name:mcr_reports.model_account_move
 #: model:ir.model,name:purchase.model_account_move
 msgid "Journal Entries"
@@ -2226,7 +2226,7 @@ msgstr "Cantidades recibidas"
 msgid "Record a new vendor bill"
 msgstr "Registrar una nueva factura de proveedor"
 
-#. modules: mcr_reports, purchase
+#. modules: purchase, mcr_reports
 #: model_terms:ir.ui.view,arch_db:mcr_reports.view_account_move_form
 #: model:ir.model.fields,field_description:purchase.field_purchase_bill_union__name
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_order_tree
@@ -2550,7 +2550,7 @@ msgstr "Moneda de Proveedor"
 msgid "Supplier Pricelist"
 msgstr "Tarifa de proveedor"
 
-#. modules: mcr_reports, purchase
+#. modules: purchase, mcr_reports
 #: model:ir.model,name:mcr_reports.model_account_tax
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__price_tax
 msgid "Tax"
