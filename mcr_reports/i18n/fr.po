@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 09:53+0000\n"
-"PO-Revision-Date: 2021-06-22 09:53+0000\n"
+"POT-Creation-Date: 2021-06-22 17:01+0000\n"
+"PO-Revision-Date: 2021-06-22 17:01+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -48,12 +48,12 @@ msgstr "${object.company_id.name} Commande (Ref ${object.name or 'n/d' })"
 #. module: mcr_reports
 #: model_terms:ir.ui.view,arch_db:mcr_reports.report_invoice_document_inherit
 msgid "&amp;nbsp;<span>on</span>"
-msgstr ""
+msgstr "&amp;nbsp;<span>sur</span>"
 
 #. module: mcr_reports
 #: model_terms:ir.ui.view,arch_db:mcr_reports.report_saleorder_document_inherit
 msgid "&amp;nbsp;<span>on</span>&amp;nbsp;"
-msgstr ""
+msgstr "&amp;nbsp;<span>sur</span>&amp;nbsp;"
 
 #. module: purchase
 #: model:ir.actions.report,print_report_name:purchase.report_purchase_quotation

@@ -15,6 +15,13 @@
                     </span>
                 </div>
             </xpath>
+            <xpath expr="//div[@name='expiration_date']" position="after">
+                <div t-if="doc.incoterm" groups="sale_stock.group_display_incoterm">
+                    <strong>Incoterm:</strong>
+                    <p t-field="doc.incoterm.code"/>
+                </div>
+            </xpath>
+
             <!-- Quitar las horas del formato de fecha -->
             <xpath expr="//div[@id='informations']//p[@t-field='doc.date_order']" position="attributes">
                 <attribute name="t-options-widget">"date"</attribute>
