@@ -7,9 +7,19 @@
             <field name="priority">150</field>
             <field name="inherit_id" ref="account.view_move_form"/>
             <field name="arch" type="xml">
+                <xpath expr="//field[@name='ref']" position="attributes">
+                    <attribute name="string">Reference</attribute>
+                </xpath>           
                 <xpath expr="//field[@name='ref']" position="after">
                     <field name="information_program" attrs="{'invisible': [('type', '!=', 'out_invoice')]}" />
                     <field name="invoice_type" required="context.get('extra_required', False)" attrs="{'invisible': [('type', '=', 'entry')]}" />
+                    <!-- <field name="x_studio_supplier_invoice_number" required="context.get('extra_required', False)" attrs="{'invisible': ['|','&amp;',['type','=','out_invoice'],['type','=','entry'],['journal_id','=','sale']]}" /> -->
+                    <!-- <field name="x_studio_supplier_invoice_number" required="context.get('extra_required', False)" attrs="{'invisible': ['|',['type','=','out_invoice'],[('&amp;','type','=','entry', )],]}" /> -->
+                    <!-- <field name="x_studio_supplier_invoice_number" required="context.get('extra_required', False)" attrs="{'invisible': ['|',['type','=','out_invoice'],['type','=','entry']]}" /> -->
+
+                    <!-- Esta es la última que estaba activa.
+                    <field name="x_studio_supplier_invoice_number" attrs="{'invisible': ['|',['type','=','out_invoice'],['type','=','entry']]}" />
+                    -->
                 </xpath>
                 <xpath expr="//field[@name='currency_id']" position="after">
                     <field name="shipping_number_1" attrs="{'invisible': [('type', '=', 'entry')]}" />
@@ -19,6 +29,24 @@
                 </xpath>
             </field>
         </record>
+        <!--
+        <record id="view_account_move_tree" model="ir.ui.view">
+            <field name="name">account.move.tree</field>
+            <field name="model">account.move</field>
+            <field name="priority">150</field>
+            <field name="inherit_id" ref="account.view_invoice_tree"/>
+            <field name="arch" type="xml">
+            
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="x_studio_supplier_invoice_number" required="context.get('extra_required', False)" invisible="context.get('default_type') in ('out_invoice', 'out_refund','out_receipt')" />
+                </xpath>
+                <xpath expr="//field[@name='invoice_origin']" position="attributes">
+                    <attribute name="attrs">{}</attribute>
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+        -->
 
         <!-- Make fields required when using actions to access the view -->
         <record id="account.action_move_journal_line" model="ir.actions.act_window">

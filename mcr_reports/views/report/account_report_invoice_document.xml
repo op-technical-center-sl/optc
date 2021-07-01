@@ -32,39 +32,102 @@
                 </div>
             </xpath>
 
+            <!--Ajuste margen izquierdo: Número de factura -->
+            <xpath expr="//h2" position="attributes">
+                <attribute name="style" separator=";" add="margin-left:-2px"/>
+            </xpath>            
+            <!--Ajuste margen izquierdo: Fecha factura, fecha pedido, origen, num. pedido -->
+            <xpath expr="//div[@id='informations']" position="attributes">
+                <attribute name="style" separator=";" add="margin-left:-20px"/>
+            </xpath>
+            <!--Ajuste margen izquierdo: Detalle de la factura -->
+            <xpath expr="//table[@name='invoice_line_table']" position="attributes">
+                <attribute name="style" separator=";" add="margin-left:-4px"/>
+            </xpath>            
+
+            <!-- El siguiente xpath no se a que se refiere-->
             <xpath expr="//div[hasclass('clearfix')]/../p[1]" position="attributes">
                 <attribute name="class">d-none</attribute>
             </xpath>
+            <!--Ampliar el ancho del subtotal-->
+             <xpath expr="//div[@id='total']" position="replace">
+                <div id="total" class="row">
+                    <div t-attf-class="#{'col-5' if report_type != 'html' else 'col-sm-7 col-md-5'} ml-auto">
+                        <table class="table table-sm;page-break-inside: avoid;">
+                            <tr class="text-left border-black o_subtotal" style="">
+                                <td><strong>Subtotal</strong></td>
+                                <td class="text-right">
+                                    <span t-field="o.amount_untaxed"/>
+                                </td>
+                            </tr>
+                            <t t-foreach="o.amount_by_group" t-as="amount_by_group">
+                                <tr class="text-left" style="">
+                                    <t t-if="len(o.line_ids.filtered(lambda line: line.tax_line_id)) == 1 and o.amount_untaxed == amount_by_group[2]">
+                                        <td><span t-esc="amount_by_group[0]"/></td>
+                                        <td class="text-right o_price_total">
+                                            <span t-esc="amount_by_group[3]"/>
+                                        </td>
+                                    </t>
+                                    <t t-else="">
+                                        <td>
+                                            <span t-esc="amount_by_group[0]"/>
+                                            <span>&amp;nbsp;<span>on</span>
+                                                <t t-esc="amount_by_group[4]"/>
+                                            </span>
+                                        </td>
+                                        <td class="text-right o_price_total">
+                                            <span t-esc="amount_by_group[3]"/>
+                                        </td>
+                                    </t>
+                                </tr>
+                            </t>
+                            <tr class="text-left border-black o_total">
+                                <td><strong>Total</strong></td>
+                                <td class="text-right">
+                                    <span t-field="o.amount_total"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </xpath>          
 
             <xpath expr="//div[hasclass('clearfix')]" position="after">
                 <p t-if="o.legal_text">
-                    <span t-field="o.legal_text" class="p-1" style="height: 10px;"/>
+                    <span t-field="o.legal_text" class="p-1" style="font-size: 14px;"/>
                 </p>
                 <p t-if="o.partner_id.import_information">
-                    <span t-field="o.partner_id.import_information"/>
+                    <strong><span style="font-size: 14px;" t-field="o.partner_id.import_information"/></strong>
                 </p>
-                <div>
-                    <strong>Origen España</strong>
+                <div style="font-size: 14px;">
+                    Origin UE
                 </div>
-                <div t-if="o.number_of_pallets">
+                <div t-if="o.number_of_pallets" style="font-size: 14px;">
                     Number of pallets: <span t-field="o.number_of_pallets"/>
                 </div>
-                <div t-if="o.total_delivery_weight">
+                <div t-if="o.total_delivery_weight" style="font-size: 14px;">
                     Bruto weight in Kg: <span t-field="o.total_delivery_weight"/>
                 </div>
-                <div t-if="o.partner_id.other_info_1">
+                <div t-if="o.partner_id.other_info_1" style="font-size: 14px;">
                     <span t-field="o.partner_id.other_info_1"/>
                 </div>
-                <div t-if="o.invoice_incoterm_id">
+                <div t-if="o.invoice_incoterm_id" style="font-size: 14px;">
                     Incoterm: <span t-field="o.invoice_incoterm_id.name"/>
                 </div>
                 <br />
-                <div t-if="o.invoice_partner_bank_id">
+                <div t-if="o.invoice_partner_bank_id" style="font-size: 14px;">
                     Bank Account: <span t-field="o.invoice_partner_bank_id.bank_id.name"/>
                     / RIB: <span t-esc="' '.join(o.invoice_partner_bank_id.acc_number.split(' ')[1:])"/>
                     / BIC: <span t-field="o.invoice_partner_bank_id.bank_id.bic"/>
                     / IBAN: <span t-esc="o.invoice_partner_bank_id.acc_number[:4]"/>
                 </div>
+            </xpath>
+
+            <!-- Condiciones de pago -->
+            <xpath expr="//p[@name='payment_term']" position="replace">
+                    <div t-if="o.invoice_payment_term_id" name="payment_term" style="font-size: 14px;">
+                        <span t-field="o.invoice_payment_term_id.note"/>
+                    </div>
             </xpath>
 
             <xpath expr="//th[@name='th_taxes']" position="attributes">
@@ -88,5 +151,40 @@
                 <attribute name="class">d-none</attribute>
             </xpath>
         </template>
+        
+        <template id="invoice_document_settings" inherit_id="account.report_invoice_document_with_payments">
+
+            <xpath expr="/t/t/div/div[5]/div" position="attributes">
+                <attribute name="class" separator=" " add="text-right"/>
+            </xpath>
+            <xpath expr="/t/t/div/div[5]/div/div/table" position="attributes">
+                <attribute name="class" separator=" " add="table-sm" remove="table-sm;page-break-inside:"/>
+            </xpath>
+
+            <xpath expr="/t/t/div/div[4]/div[1]" position="attributes">
+                <attribute name="style" separator=";" add="margin-left:5px"/>
+            </xpath>
+
+            <xpath expr="/t/t/div/p[1]/span" position="attributes">
+                <attribute name="style" separator=";" add="margin-left:-4px"/>
+            </xpath>
+        </template>
+        
+        <template id="invoice_document_settings_without_payments" inherit_id="account.report_invoice_document">
+            <xpath expr="/t[1]/t[1]/div[1]/p[6]" position="replace"/>
+            <xpath expr="/t/t/div/div[5]/div" position="attributes">
+                <attribute name="class" separator=" " add="text-right"/>
+            </xpath>
+            <xpath expr="/t/t/div/div[5]/div/div/table" position="attributes">
+                <attribute name="class" separator=" " add="table-sm" remove="table-sm;page-break-inside:"/>
+            </xpath>
+            <xpath expr="/t/t/div/div[4]/div[1]" position="attributes">
+                <attribute name="style" separator=";" add="margin-left:5px"/>
+            </xpath>
+            <xpath expr="/t/t/div/p[1]/span" position="attributes">
+                <attribute name="style" separator=";" add="margin-left:-4px"/>
+            </xpath>
+        </template>
+
     </data>
 </odoo>
