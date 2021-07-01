@@ -29,13 +29,14 @@
                 </xpath>
             </field>
         </record>
+        <!--
         <record id="view_account_move_tree" model="ir.ui.view">
             <field name="name">account.move.tree</field>
             <field name="model">account.move</field>
             <field name="priority">150</field>
             <field name="inherit_id" ref="account.view_invoice_tree"/>
             <field name="arch" type="xml">
-            <!--
+            
                 <xpath expr="//field[@name='name']" position="after">
                     <field name="x_studio_supplier_invoice_number" required="context.get('extra_required', False)" invisible="context.get('default_type') in ('out_invoice', 'out_refund','out_receipt')" />
                 </xpath>
@@ -43,9 +44,9 @@
                     <attribute name="attrs">{}</attribute>
                     <attribute name="invisible">1</attribute>
                 </xpath>
-                -->
             </field>
         </record>
+        -->
 
         <!-- Make fields required when using actions to access the view -->
         <record id="account.action_move_journal_line" model="ir.actions.act_window">
