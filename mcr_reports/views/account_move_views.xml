@@ -16,7 +16,10 @@
                     <!-- <field name="x_studio_supplier_invoice_number" required="context.get('extra_required', False)" attrs="{'invisible': ['|','&amp;',['type','=','out_invoice'],['type','=','entry'],['journal_id','=','sale']]}" /> -->
                     <!-- <field name="x_studio_supplier_invoice_number" required="context.get('extra_required', False)" attrs="{'invisible': ['|',['type','=','out_invoice'],[('&amp;','type','=','entry', )],]}" /> -->
                     <!-- <field name="x_studio_supplier_invoice_number" required="context.get('extra_required', False)" attrs="{'invisible': ['|',['type','=','out_invoice'],['type','=','entry']]}" /> -->
+
+                    <!-- Esta es la última que estaba activa.
                     <field name="x_studio_supplier_invoice_number" attrs="{'invisible': ['|',['type','=','out_invoice'],['type','=','entry']]}" />
+                    -->
                 </xpath>
                 <xpath expr="//field[@name='currency_id']" position="after">
                     <field name="shipping_number_1" attrs="{'invisible': [('type', '=', 'entry')]}" />
@@ -32,10 +35,11 @@
             <field name="priority">150</field>
             <field name="inherit_id" ref="account.view_invoice_tree"/>
             <field name="arch" type="xml">
+            <!--
                 <xpath expr="//field[@name='name']" position="after">
-                    <!-- <field name="x_studio_supplier_invoice_number" required="context.get('extra_required', False)" attrs="{'invisible': ['type','=','out_invoice']}" /> -->
                     <field name="x_studio_supplier_invoice_number" required="context.get('extra_required', False)" invisible="context.get('default_type') in ('out_invoice', 'out_refund','out_receipt')" />
                 </xpath>
+                -->
                 <xpath expr="//field[@name='invoice_origin']" position="attributes">
                     <attribute name="attrs">{}</attribute>
                     <attribute name="invisible">1</attribute>
