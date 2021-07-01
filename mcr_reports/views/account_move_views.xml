@@ -39,11 +39,11 @@
                 <xpath expr="//field[@name='name']" position="after">
                     <field name="x_studio_supplier_invoice_number" required="context.get('extra_required', False)" invisible="context.get('default_type') in ('out_invoice', 'out_refund','out_receipt')" />
                 </xpath>
-                -->
                 <xpath expr="//field[@name='invoice_origin']" position="attributes">
                     <attribute name="attrs">{}</attribute>
                     <attribute name="invisible">1</attribute>
                 </xpath>
+                -->
             </field>
         </record>
 
