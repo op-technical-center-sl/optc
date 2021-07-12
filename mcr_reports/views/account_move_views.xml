@@ -27,8 +27,24 @@
                     <field name="total_delivery_weight" required="context.get('extra_required', False)" attrs="{'invisible': [('type', '=', 'entry')]}" />
                     <field name="legal_text" invisible="1" />
                 </xpath>
+                <!-- Vista:	studio_customization.odoo_studio_account__e708d57f-a3e5-473d-80d5-05f58b8652c7 -->
+                <xpath expr="//field[@name='ref']" position="attributes">
+                    <attribute name="string">Reference</attribute>
+                </xpath>                
             </field>
         </record>
+        <record id="view_account_move_tree" model="ir.ui.view">
+            <field name="name">account.move.tree</field>
+            <field name="model">account.move</field>
+            <field name="priority">150</field>
+            <field name="inherit_id" ref="account.view_invoice_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="ref" required="context.get('extra_required', False)" />
+                </xpath>
+            </field>
+        </record>
+
         <!--
         <record id="view_account_move_tree" model="ir.ui.view">
             <field name="name">account.move.tree</field>

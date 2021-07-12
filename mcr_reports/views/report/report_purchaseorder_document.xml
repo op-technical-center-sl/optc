@@ -22,6 +22,40 @@
             <xpath expr="/t[1]/t[1]/div[1]/table[1]/tbody[1]/t[2]/tr[1]/t[1]/td[3]/span[1]" position="attributes">
                 <attribute name="t-options-widget">"date"</attribute>
             </xpath>
+
+            <!-- Desglose de impuestos-->
+            <xpath expr="//div[@id='total']" position="replace">
+                <div class="clearfix" name="so_total_summary">
+                    <div id="total" class="row" name="total">
+                        <div t-attf-class="#{'col-5' if report_type != 'html' else 'col-sm-7 col-md-5'} ml-auto">
+                            <table class="table table-sm">
+                                <tr class="border-black o_subtotal" style="">
+                                    <td name="td_amount_untaxed_label"><strong>Subtotal</strong></td>
+                                    <td name="td_amount_untaxed" class="text-right">
+                                        <span t-field="o.amount_untaxed"/>
+                                    </td>
+                                </tr>
+                                <tr t-foreach="o._compute_taxes_by_group()" t-as="tax_line">
+                                    <td>
+                                        <span t-esc="tax_line[1]['name']"/>
+                                        <span>&amp;nbsp;<span>on</span>&amp;nbsp;<t t-esc="tax_line[1]['subtotal']" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}" /></span>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-esc="tax_line[1]['tax_amount']"  t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                                    </td>
+
+                                </tr>
+                                <tr class="border-black o_total">
+                                    <td name="td_amount_total_label"><strong>Total</strong></td>
+                                    <td name="td_amount_total" class="text-right">
+                                        <span t-field="o.amount_total"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
         </template>
     </data>
 </odoo>

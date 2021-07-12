@@ -96,9 +96,9 @@
                 <p t-if="o.legal_text">
                     <span t-field="o.legal_text" class="p-1" style="font-size: 14px;"/>
                 </p>
-                <p t-if="o.partner_id.import_information">
+                <div style="page-break-inside: avoid" t-if="o.partner_id.import_information">
                     <strong><span style="font-size: 14px;" t-field="o.partner_id.import_information"/></strong>
-                </p>
+                </div>
                 <div style="font-size: 14px;">
                     Origin UE
                 </div>
@@ -171,7 +171,7 @@
         </template>
         
         <template id="invoice_document_settings_without_payments" inherit_id="account.report_invoice_document">
-            <xpath expr="/t[1]/t[1]/div[1]/p[6]" position="replace"/>
+            <!-- <xpath expr="/t[1]/t[1]/div[1]/p[6]" position="replace"/> -->
             <xpath expr="/t/t/div/div[5]/div" position="attributes">
                 <attribute name="class" separator=" " add="text-right"/>
             </xpath>

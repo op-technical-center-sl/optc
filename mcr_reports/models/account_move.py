@@ -1,5 +1,6 @@
 from odoo import api, models, fields, _
 import logging
+from odoo.tools.misc import formatLang, format_date, get_lang
 
 # _logger = logging.getLogger(__name__)
 
@@ -14,6 +15,31 @@ class SaleOrder(models.Model):
             'number_of_pallets': sum(self.picking_ids.mapped('number_of_pallets'))
         })
         return values
+
+
+class PurchaseOrder(models.Model):
+    _inherit = "purchase.order"
+
+    @api.depends('order.line')
+    def _compute_taxes_by_group(self):
+        ''' Helper to get the taxes grouped according their account.tax.group.'''
+        vals = {}
+
+        for line in self.order_line:
+            if line.taxes_id:
+                for tax in line.taxes_id:
+                    if tax.amount in vals.keys():
+                        vals[tax.amount]["subtotal"] += round (line.price_subtotal, 2)
+                        vals[tax.amount]["tax_amount"] += round(float ( line.price_subtotal * tax.amount /100 ))  #Ped 523 -> cuota: 8,69 € -> Devuelve: 869,4
+                    else:
+                        vals.update({
+                            tax.amount: {
+                                'subtotal': round(line.price_subtotal,2),
+                                'tax_amount': round( float ( line.price_subtotal * tax.amount /100 ),2),
+                                'name': tax.name[0:tax.name.find('%')+5] #tax.name 
+                            }})
+        return vals.items()
+
 
 
 class AccountMove(models.Model):
